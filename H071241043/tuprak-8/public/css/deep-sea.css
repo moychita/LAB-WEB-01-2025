@@ -1,0 +1,324 @@
+/* --- Tema Utama: Glassmorphism / Pink Neon --- */
+
+/* Import font yang kita tambahkan di layout */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Latar belakang ungu/pink gelap */
+    background-color: #2b0920; /* Fallback */
+    background-image: linear-gradient(180deg, #300a24 0%, #2b0920 100%);
+    color: #f0f0f0;
+    min-height: 100vh;
+}
+
+/* --- Style Navbar --- */
+.navbar.bg-dark {
+    background-color: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+}
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+.navbar-brand i {
+    color: #f92672; /* Warna pink neon untuk ikon ikan */
+}
+.nav-link.active {
+    color: #ffffff !important;
+}
+.nav-link {
+    color: #c0c0c0 !important;
+}
+
+/* --- Style "Card" (Efek Kaca) --- */
+.card {
+    background: linear-gradient(135deg, rgba(89, 23, 63, 0.5), rgba(89, 23, 63, 0.3));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    color: #f0f0f0;
+}
+.card-header, .card-footer {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Style Form (Sesuai Referensi) --- */
+.form-label {
+    font-weight: 500;
+    color: #c0c0c0; /* Label abu-abu */
+}
+.form-label-required:after {
+    content: " *";
+    color: #f92672; /* Tanda bintang pink */
+}
+.form-control, .form-select {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f0f0; /* Teks input putih */
+    border-radius: 8px; /* Input rounded */
+    padding: 0.75rem 1rem;
+}
+.form-control:focus, .form-select:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: #f92672; /* Border "glow" pink */
+    box-shadow: 0 0 0 0.25rem rgba(249, 38, 114, 0.25);
+    color: #f0f0f0;
+}
+.form-control::placeholder {
+    color: #777;
+}
+.form-select option {
+    background-color: #2b0920;
+}
+.text-danger {
+    color: #f92672 !important;
+}
+
+/* --- Style Tombol (Sesuai Referensi) --- */
+.btn {
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+.btn-primary {
+    background-color: #f92672;
+    border-color: #f92672;
+    color: #ffffff; /* Teks putih */
+}
+.btn-primary:hover {
+    background-color: #ff508f;
+    border-color: #ff508f;
+    color: #ffffff;
+}
+.btn-secondary {
+    background-color: #5c1f44; /* Dark pink */
+    border: 1px solid #5c1f44;
+    color: #c0c0c0;
+}
+.btn-secondary:hover {
+    background-color: #7a295a;
+    border-color: #7a295a;
+    color: #ffffff;
+}
+.btn-info, .btn-warning, .btn-danger {
+    font-weight: 700;
+    border-radius: 8px;
+}
+.btn-info {
+    background-color: #0dcaf0;
+    color: #000;
+}
+.btn-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* --- Style Kustom untuk Daftar Ikan (Non-Table) --- */
+.fish-list-container {
+    margin: 0;
+}
+.card-style-list {
+    background: linear-gradient(135deg, rgba(89, 23, 63, 0.5), rgba(89, 23, 63, 0.3));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    color: #f0f0f0;
+}
+.fish-list-header {
+    font-size: 0.9rem;
+    color: #c0c0c0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.fish-list-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease, transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+.fish-list-item:last-child {
+    border-bottom: none;
+}
+.fish-list-item:hover {
+    background-color: rgba(89, 23, 63, 0.8);
+    transform: scale(1.02);
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+.fish-name {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+.fish-rarity {
+    font-size: 0.9rem;
+    color: #c0c0c0;
+}
+
+/* --- Style untuk Halaman Index Baru --- */
+.btn-light-main {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #1a1a2e;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+    transition: all 0.2s ease;
+    animation: pulse-glow 2s infinite ease-in-out;
+}
+.btn-light-main:hover {
+    background-color: #e0e0e0;
+    border-color: #e0e0e0;
+    color: #1a1a2e;
+}
+.btn-light-main i {
+    font-weight: bold;
+    margin-right: 4px;
+}
+.page-controls .form-select-sm {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    border-radius: 8px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    transition: all 0.25s ease-in-out;
+}
+.page-controls .form-select-sm:focus {
+    border-color: #f92672;
+    box-shadow: 0 0 0 0.25rem rgba(249, 38, 114, 0.25);
+    color: #f0f0f0;
+}
+.page-controls .form-label {
+    white-space: nowrap;
+}
+.page-controls .form-select-sm:hover {
+    border-color: #f92672;
+    box-shadow: 0 0 10px rgba(249, 38, 114, 0.4);
+}
+.empty-state {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.empty-state h4 {
+    font-weight: 700;
+}
+
+/* --- Style untuk Halaman Detail (Show Page) --- */
+.detail-list {
+    background-color: transparent;
+    list-style: none;
+    padding-left: 0;
+}
+.detail-list .list-group-item {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.25rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.detail-list .list-group-item:last-child {
+    border-bottom: none;
+}
+.detail-label {
+    font-weight: 500;
+    color: #c0c0c0;
+}
+.detail-value {
+    font-weight: 700;
+    color: #f0f0f0;
+}
+.detail-value-long {
+    font-weight: 500;
+    color: #f0f0f0;
+    width: 100%;
+    padding-top: 0.5rem;
+}
+
+/* --- TAMBAHAN: Animasi Hover --- */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+.btn-primary:hover, .btn-light-main:hover {
+    box-shadow: 0 4px 25px rgba(249, 38, 114, 0.4);
+}
+.navbar .nav-link {
+    transition: all 0.2s ease-in-out;
+}
+.navbar .nav-link:hover {
+    color: #f92672 !important; 
+    transform: translateY(-2px);
+}
+
+/* --- TAMBAHAN: Animasi UI "Menarik" --- */
+.page-title {
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(249, 38, 114, 0.7), 
+                 0 0 25px rgba(249, 38, 114, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    letter-spacing: 0.5px;
+}
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                    0 0 15px rgba(249, 38, 114, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 
+                    0 0 30px rgba(249, 38, 114, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                    0 0 15px rgba(249, 38, 114, 0.2);
+    }
+}
+
+/* --- BLOK FINAL PAGINATION (BERSIH) --- */
+.pagination {
+    margin-bottom: 0; 
+}
+.pagination-summary {
+    color: #c0c0c0;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+}
+.pagination .page-link {
+    background-color: rgba(89, 23, 63, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    margin: 0 4px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.pagination .page-link:hover {
+    background-color: rgba(89, 23, 63, 1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+.pagination .page-item.active .page-link {
+    background-color: #f92672;
+    border-color: #f92672;
+    color: #ffffff;
+    font-weight: 700;
+}
+.pagination .page-item.disabled .page-link {
+    background-color: rgba(89, 23, 63, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #777;
+    pointer-events: none;
+}
+
+/* --- BRUTAL FIX: SEMBUNYIKAN TEKS PAGINATION ABU-ABU --- */
+nav[role="navigation"] p {
+    display: none !important;
+}
